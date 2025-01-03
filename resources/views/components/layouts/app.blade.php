@@ -19,7 +19,10 @@
     @endif
 </head>
 <body>
-    <div>
+    <div class="relative mx-auto max-w-2xl px-6">
+        <div class="flex items-center justify-center py-12">
+            <h1 class="text-5xl">envflow</h1>
+        </div>
         {{ $slot }}
     </div>
 </body>

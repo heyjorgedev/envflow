@@ -28,6 +28,7 @@
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
                 <a href="#" class="text-sm/6 font-semibold text-gray-900">Share</a>
+                <a href="#" class="text-sm/6 font-semibold text-gray-900">Deploy</a>
                 <a href="#" class="text-sm/6 font-semibold text-gray-900">About</a>
             </div>
         </nav>

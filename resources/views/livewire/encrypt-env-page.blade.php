@@ -4,7 +4,7 @@
         <p class="text-center">With Envflow, lorem</p>
     </div>
     <form wire:submit="encrypt">
-        <div class="grid gap-2">
+        <div class="grid gap-6">
             <textarea wire:model="form.value" class="border rounded-lg w-full" rows="10"></textarea>
             <div class="border p-4 rounded-lg">
                 <label>
@@ -12,7 +12,7 @@
                     Include Comments
                 </label>
             </div>
-            <button class="border p-2 rounded-lg">Share</button>
+            <button class="border-rose-700 px-2 py-3 rounded-lg bg-rose-600 text-white">Share</button>
         </div>
     </form>
 </div>

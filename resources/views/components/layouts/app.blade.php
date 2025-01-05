@@ -12,7 +12,7 @@
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="font-sans antialiased">
     <header class="bg-white" x-data="{ open: false }">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
             <a href="{{ route('home') }}" class="-m-1.5 p-1.5 font-bold text-xl text-rose-600">

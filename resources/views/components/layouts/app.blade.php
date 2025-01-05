@@ -15,7 +15,7 @@
 <body>
     <header class="bg-white" x-data="{ open: false }">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <a href="#" class="-m-1.5 p-1.5 font-bold text-xl text-rose-600">
+            <a href="{{ route('home') }}" class="-m-1.5 p-1.5 font-bold text-xl text-rose-600">
                 Envflow
             </a>
             <div class="flex lg:hidden">
@@ -37,7 +37,7 @@
             <div class="fixed inset-0 z-10"></div>
             <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div class="flex items-center justify-between">
-                    <a href="#" class="-m-1.5 p-1.5 font-bold text-xl">
+                    <a href="{{ route('home') }}" class="-m-1.5 p-1.5 font-bold text-xl">
                         Envflow
                     </a>
                     <button x-on:click="open = false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">

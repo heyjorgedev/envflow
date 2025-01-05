@@ -11,7 +11,9 @@ class EncryptEnvPage extends Component
 
     public function encrypt()
     {
-        $this->form->submit();
+        $result = $this->form->submit();
+
+        $this->redirect(route('success', ['id' => $result['id'], 'key' => $result['key']]));
     }
 
     public function render()

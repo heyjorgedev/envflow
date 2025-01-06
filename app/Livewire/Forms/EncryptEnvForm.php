@@ -14,7 +14,7 @@ class EncryptEnvForm extends Form
 
     public int $shareLimit = 1;
 
-    public int $shareTtl = 60 * 5;
+    public int $shareTtl = 5;
 
     protected function rules()
     {
@@ -35,7 +35,7 @@ class EncryptEnvForm extends Form
                 includeComments: $this->includeComments,
             ),
             shareLimit: $this->shareLimit,
-            ttl: $this->shareTtl
+            ttl: $this->shareTtl * 60
         );
 
         $this->reset();

@@ -12,7 +12,7 @@ class EncryptEnvFile
         $key = $this->generateKey();
         $encrypter = new Encrypter($key, config('app.cipher'));
 
-        $encryptedValue = $encrypter->encrypt($value);
+        $encryptedValue = $encrypter->encryptString($value);
 
         return [
             'value' => $encryptedValue,

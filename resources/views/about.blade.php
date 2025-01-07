@@ -2,7 +2,7 @@
     <div class="flex flex-col items-center justify-center py-12">
         <h1 class="text-3xl text-center font-bold pb-4">About the project</h1>
     </div>
-    <div class="text-black flex flex-col gap-4">
+    <div class=" flex flex-col gap-4">
         <p>Envflow is a simple tool to encrypt your env file and share it with your team.</p>
         <p>The project is fully open source and available on <a href="https://github.com/heyjorgedev/envflow" target="_blank" class="text-rose-600">GitHub</a>.</p>
         <p>It uses a shared key to encrypt the env file, so only the team members with the key can decrypt it.</p>
@@ -11,7 +11,7 @@
         <p>It uses <a href="https://upstash.com/" target="_blank" class="text-rose-600">Upstash Redis</a> for storing the encrypted env file.</p>
         <p><a href="https://upstash.com/" target="_blank" class="text-rose-600">Upstash Redis</a> is a serverless cloud-based Redis™ service that provides high availability, scalability, and security. It is easy to use and integrates seamlessly with Laravel.</p>
         <div class="flex justify-center pt-12">
-            <a href="https://upstash.com/" target="_blank" class="border p-6 rounded-lg flex flex-col gap-4" aria-label="Upstash">
+            <a href="https://upstash.com/" target="_blank" class="border p-6 rounded-lg flex flex-col gap-4 dark:bg-white/80" aria-label="Upstash">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10" viewBox="0 0 1631 472" fill="none" aria-label="Upstash Logo">
                     <g clip-path="url(#upstash_white_bg)">
                         <path fill="#00C98D" d="M.422 412.975c78.105 78.104 204.738 78.104 282.843 0 78.104-78.105 78.104-204.738 0-282.843l-35.356 35.355c58.579 58.579 58.579 153.554 0 212.132-58.578 58.579-153.553 58.579-212.132 0L.422 412.975Z"/>

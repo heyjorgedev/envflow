@@ -12,7 +12,7 @@
         ],
 ];
 @endphp
-<header class="bg-white" x-data="{ open: false }">
+<header x-data="{ open: false }">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <a href="{{ route('home') }}" class="-m-1.5 p-1.5 font-bold text-2xl text-rose-600" wire:navigate>
             Envflow
@@ -27,7 +27,7 @@
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
             @foreach ($menus as $menu)
-                <a href="{{ $menu['url'] }}" @class(["text-rose-600" => $menu['active'], "text-gray-900" => !$menu['active'], "-m-1.5 p-1.5 font-semibold"]) class="rounded-md text-base/7 hover:bg-gray-50" wire:navigate>
+                <a href="{{ $menu['url'] }}" @class(["text-rose-600" => $menu['active'], "text-gray-900 dark:text-white/60" => !$menu['active'], "-m-1.5 p-1.5 font-semibold"]) class="rounded-md text-base/7 hover:bg-gray-50" wire:navigate>
                     {{ $menu['name'] }}
                 </a>
             @endforeach

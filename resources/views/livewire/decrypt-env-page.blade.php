@@ -2,11 +2,11 @@
     <div class="flex flex-col items-center justify-center py-12">
         <h2 class="text-3xl text-center font-bold pb-4">Decrypt your secret env file</h2>
     </div>
-    <div class="border p-6 rounded-lg mb-12">
+    <div class="border p-6 rounded-lg mb-12 dark:border-slate-700">
         <form wire:submit="decrypt">
             <div class="grid gap-6">
                 <div>
-                    <x-label>Key</x-label>
+                    <x-label>Decryption Key</x-label>
                     <div class="mt-2">
                         <x-input class="w-full" type="text" wire:model="key" wire:loading.attr="disabled" x-bind:disabled="$wire.displaySecret || $wire.hasError" />
                     </div>
@@ -20,15 +20,15 @@
             </div>
         </form>
     </div>
-    <div class="relative border rounded-lg overflow-hidden">
+    <div class="relative border rounded-lg overflow-hidden dark:border-slate-700">
         @if($this->displaySecret)
             <div>
-                <textarea wire:model="fileContents" class="w-full p-5" rows="10" disabled></textarea>
+                <textarea wire:model="fileContents" class="w-full p-5 dark:bg-slate-800" rows="10" disabled></textarea>
             </div>
         @else
             <div>
                 <div class="blur">
-                <textarea class="w-full p-5 select-none pointer-events-none" rows="10" disabled>
+                <textarea class="w-full p-5 select-none pointer-events-none dark:bg-slate-800" rows="10" disabled>
 APP_NAME=Envflow
 APP_ENV=local
 APP_KEY=base64:dasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd

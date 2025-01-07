@@ -1,4 +1,4 @@
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,11 +12,15 @@
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased">
-    <x-layouts.header />
-    <div class="relative mx-auto max-w-2xl px-6">
-        {{ $slot }}
+<body class="font-sans antialiased h-full">
+    <div class="flex flex-col h-full justify-between">
+        <div>
+            <x-layouts.header />
+            <div class="relative mx-auto max-w-2xl px-6">
+                {{ $slot }}
+            </div>
+        </div>
+        <x-layouts.footer />
     </div>
-    <x-layouts.footer />
 </body>
 </html>

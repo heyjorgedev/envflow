@@ -7,8 +7,8 @@
         ],
         [
             'name' => 'About',
-            'url' => route('home'),
-            'active' => false,
+            'url' => route('about'),
+            'active' => request()->routeIs(['about']),
         ],
 ];
 @endphp

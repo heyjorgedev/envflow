@@ -3,8 +3,9 @@
 namespace App\Actions;
 
 use App\Data\StoreEnvFileResult;
-use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Redis as RedisFacade;
 use Illuminate\Support\Str;
+use Redis;
 
 class StoreEnvFile
 {
@@ -15,7 +16,11 @@ class StoreEnvFile
         $id = Str::uuid();
         $encrypted = $this->encrypter->encrypt($fileContents);
 
-        Redis::set("envfile:$id", $encrypted->value, 'ex', $ttl);
+        RedisFacade::pipeline(function (Redis $pipe) use ($id, $encrypted, $ttl, $shareLimit) {
+            $options = ['EX' => $ttl];
+            $pipe->set("envfile:$id", $encrypted->value, $options);
+            $pipe->set("envfile:$id:shareLimit", $shareLimit, $options);
+        });
 
         return new StoreEnvFileResult(id: $id, key: $encrypted->key);
     }

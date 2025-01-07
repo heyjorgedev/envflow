@@ -16,7 +16,10 @@ class DecryptEnvFile
             return null;
         }
 
-        RedisFacade::del("envfile:$id");
+        $shareLimit = RedisFacade::decr("envfile:$id:shareLimit");
+        if ($shareLimit <= 0) {
+            RedisFacade::del("envfile:$id");
+        }
 
         return $encrypter->decryptString($value);
     }

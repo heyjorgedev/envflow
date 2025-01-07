@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-layouts.app title="About">
     <div class="flex flex-col items-center justify-center py-12">
         <h1 class="text-3xl text-center font-bold pb-4">About the project</h1>
     </div>

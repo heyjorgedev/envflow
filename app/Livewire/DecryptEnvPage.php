@@ -40,6 +40,6 @@ class DecryptEnvPage extends Component
 
     public function render()
     {
-        return view('livewire.decrypt-env-page');
+        return view('livewire.decrypt-env-page')->title('Decrypt');
     }
 }

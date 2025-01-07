@@ -1,9 +1,10 @@
+@props(['title' => null])
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name') }}@if($title) | {{ $title }}@endif</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

@@ -5,7 +5,7 @@
     </div>
 
     <div class="border p-6 rounded-lg mb-12">
-        <h2 class="text-sm font-medium pb-1">Share this link with your team (includes key):</h2>
+        <h2 class="text-sm font-medium pb-1">Share this link with your team (includes decryption key):</h2>
         <x-input type="text" readonly class="w-full" value="{{ route('decrypt', ['id' => $this->id, 'key' => $this->key]) }}" />
         <div class="flex justify-end pt-4">
             <x-clipboard-copy :value="route('decrypt', ['id' => $this->id, 'key' => $this->key])" />
@@ -14,7 +14,7 @@
 
     <div class="border p-6 rounded-lg mb-12 grid gap-6">
         <div>
-            <h2 class="text-sm font-medium pb-1">Share this link with your team (does not include key):</h2>
+            <h2 class="text-sm font-medium pb-1">Share this link with your team (does not include decryption key):</h2>
             <x-input type="text" readonly class="w-full" value="{{ route('decrypt', [
                 'id' => $this->id,
             ]) }}" />

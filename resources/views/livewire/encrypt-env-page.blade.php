@@ -11,10 +11,10 @@
                     <x-toggle wire:model="form.includeComments" sr="Include Comments" />
                 </x-feature>
                 <x-feature title="Read Limit" description="How many times can a share be read?">
-                    <x-input type="number" min="1" max="100" wire:model="form.shareLimit" class="w-24 text-right" />
+                    <x-input type="number" min="1" max="100" wire:model="form.shareLimit" class="w-24" />
                 </x-feature>
                 <x-feature title="Time to Live" description="How many minutes should the share be available?">
-                    <x-input type="number" min="1" max="60" wire:model="form.shareTtl" class="w-24 text-right" />
+                    <x-input type="number" min="1" max="60" wire:model="form.shareTtl" class="w-24" />
                 </x-feature>
             </div>
             <x-button type="submit" wire:loading.attr="disabled">

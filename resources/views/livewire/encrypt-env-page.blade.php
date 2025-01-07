@@ -7,33 +7,15 @@
         <div class="grid gap-6">
             <textarea wire:model="form.value" class="border rounded-lg w-full p-6 outline-none focus:ring focus:ring-rose-600" rows="10" placeholder="Paste your env file here"></textarea>
             <div class="border rounded-lg divide-y">
-                <div class="p-6 flex items-center justify-between">
-                    <div>
-                        <h3 class="text-sm font-medium pb-1">Include Comments</h3>
-                        <p class="text-xs text-black/50">Should comments be included in the share?</p>
-                    </div>
-                    <div>
-                        <x-toggle wire:model="form.includeComments" sr="Include Comments" />
-                    </div>
-                </div>
-                <div class="p-6 flex items-center justify-between gap-4">
-                    <div>
-                        <h3 class="text-sm font-medium pb-1">Read Limit</h3>
-                        <p class="text-xs text-black/50">How many times can a share be read?</p>
-                    </div>
-                    <div>
-                        <x-input type="number" wire:model="form.shareLimit" class="w-24 text-right" />
-                    </div>
-                </div>
-                <div class="p-6 flex items-center justify-between gap-4">
-                    <div>
-                        <h3 class="text-sm font-medium pb-1">Time to Live</h3>
-                        <p class="text-xs text-black/50">How many minutes should the share be available?</p>
-                    </div>
-                    <div>
-                        <x-input type="number" wire:model="form.shareTtl" class="w-24 text-right" />
-                    </div>
-                </div>
+                <x-feature title="Include Comments" description="Should comments be included in the share?">
+                    <x-toggle wire:model="form.includeComments" sr="Include Comments" />
+                </x-feature>
+                <x-feature title="Read Limit" description="How many times can a share be read?">
+                    <x-input type="number" wire:model="form.shareLimit" class="w-24 text-right" />
+                </x-feature>
+                <x-feature title="Time to Live" description="How many minutes should the share be available?">
+                    <x-input type="number" wire:model="form.shareTtl" class="w-24 text-right" />
+                </x-feature>
             </div>
             <x-button type="submit" wire:loading.attr="disabled">
                 Share Env

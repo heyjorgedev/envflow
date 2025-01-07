@@ -23,6 +23,18 @@ class EncryptEnvForm extends Form
             'value' => [
                 'required',
             ],
+            'shareLimit' => [
+                'required',
+                'integer',
+                'min:1',
+                'max:100',
+            ],
+            'shareTtl' => [
+                'required',
+                'integer',
+                'min:1',
+                'max:60',
+            ],
         ];
     }
 

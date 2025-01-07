@@ -1,6 +1,6 @@
 @props(['sr' => null])
 <div x-data="{ enabled: false }" x-modelable="enabled" {{ $attributes }}>
-    <button x-on:click="enabled = !enabled" x-bind:class="enabled ? 'bg-rose-600' : 'bg-gray-200'" type="button" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-rose-600 focus:ring-offset-2" role="switch" x-bind:aria-checked="enabled">
+    <button x-cloak x-on:click="enabled = !enabled" x-bind:class="enabled ? 'bg-rose-600' : 'bg-gray-200 dark:bg-slate-700'" type="button" class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-rose-600 focus:ring-offset-2" role="switch" x-bind:aria-checked="enabled">
         @if($sr)
             <span class="sr-only">{{ $sr }}</span>
         @else

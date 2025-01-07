@@ -13,7 +13,7 @@ class EncryptEnvPage extends Component
     {
         $result = $this->form->submit();
 
-        $this->redirect(route('success', ['id' => $result['id'], 'key' => $result['key']]));
+        $this->redirect(route('success', ['id' => $result->id, 'key' => $result->key]));
     }
 
     public function render()

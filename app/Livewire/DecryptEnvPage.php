@@ -4,9 +4,7 @@ namespace App\Livewire;
 
 use App\Actions\DecryptEnvFile;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redis;
 use Livewire\Attributes\Locked;
-use Livewire\Attributes\Url;
 use Livewire\Component;
 
 class DecryptEnvPage extends Component

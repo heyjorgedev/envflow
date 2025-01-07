@@ -4,6 +4,7 @@ namespace App\Livewire\Forms;
 
 use App\Actions\ProcessEnvFile;
 use App\Actions\StoreEnvFile;
+use App\Data\StoreEnvFileResult;
 use Livewire\Form;
 
 class EncryptEnvForm extends Form
@@ -25,7 +26,7 @@ class EncryptEnvForm extends Form
         ];
     }
 
-    public function submit()
+    public function submit(): StoreEnvFileResult
     {
         $this->validate();
 

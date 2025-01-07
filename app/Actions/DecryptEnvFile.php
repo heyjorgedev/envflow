@@ -4,16 +4,15 @@ namespace App\Actions;
 
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Facades\Redis as RedisFacade;
-use Redis;
 
 class DecryptEnvFile
 {
-    public function decrypt(string $id, #[\SensitiveParameter] string $key): string|null
+    public function decrypt(string $id, #[\SensitiveParameter] string $key): ?string
     {
         $encrypter = new Encrypter($key, config('app.cipher'));
 
         $value = RedisFacade::get("envfile:$id");
-        if (!$value) {
+        if (! $value) {
             return null;
         }
 

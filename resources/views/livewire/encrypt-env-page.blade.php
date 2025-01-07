@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            <x-button type="submit">
+            <x-button type="submit" wire:loading.attr="disabled">
                 Share Env
             </x-button>
         </div>

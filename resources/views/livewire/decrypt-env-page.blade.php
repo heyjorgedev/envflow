@@ -8,10 +8,15 @@
                 <div>
                     <x-label>Key</x-label>
                     <div class="mt-2">
-                        <x-input class="w-full" type="text" wire:model="key" />
+                        <x-input class="w-full" type="text" wire:model="key" x-bind:disabled="$wire.displaySecret || $wire.hasError" />
                     </div>
                 </div>
-                <x-button type="submit" wire:loading.attr="disabled">Read Secret Env</x-button>
+                <x-button
+                    type="submit"
+                    wire:loading.attr="disabled"
+                    x-bind:disabled="$wire.displaySecret || $wire.hasError">
+                    Read Secret Env
+                </x-button>
             </div>
         </form>
     </div>

@@ -6,22 +6,28 @@
 
     <div class="border p-6 rounded-lg mb-12">
         <h2 class="text-sm font-medium pb-1">Share this link with your team (includes key):</h2>
-        <x-input type="text" readonly class="w-full" value="{{ route('decrypt', [
-            'id' => $this->id,
-            'key' => $this->key,
-        ]) }}" />
+        <x-input type="text" readonly class="w-full" value="{{ route('decrypt', ['id' => $this->id, 'key' => $this->key]) }}" />
+        <div class="flex justify-end pt-4">
+            <x-clipboard-copy :value="route('decrypt', ['id' => $this->id, 'key' => $this->key])" />
+        </div>
     </div>
 
     <div class="border p-6 rounded-lg mb-12 grid gap-6">
         <div>
             <h2 class="text-sm font-medium pb-1">Share this link with your team (does not include key):</h2>
             <x-input type="text" readonly class="w-full" value="{{ route('decrypt', [
-            'id' => $this->id,
-        ]) }}" />
+                'id' => $this->id,
+            ]) }}" />
+            <div class="flex justify-end pt-4">
+                <x-clipboard-copy :value="route('decrypt', [ 'id' => $this->id ])" />
+            </div>
         </div>
         <div>
             <p class="text-sm font-medium pb-1">You'll need to enter the key in the decrypt page to read the env file.</p>
             <x-input type="text" readonly class="w-full" value="{{ $this->key }}" />
+            <div class="flex justify-end pt-4">
+                <x-clipboard-copy :value="$this->key" />
+            </div>
         </div>
     </div>
 </div>

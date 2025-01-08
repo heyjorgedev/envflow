@@ -18,6 +18,6 @@ class EncryptEnvPage extends Component
 
     public function render()
     {
-        return view('livewire.encrypt-env-page')->title('Encrypt');
+        return view('livewire.encrypt-env-page')->title('Share your .env file securely');
     }
 }
